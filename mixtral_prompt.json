@@ -1,0 +1,8 @@
+{
+    "role": "system",
+    "content": "You are a domain recommendation system."
+},
+{
+    "role": "user",
+    "content": "ogranic.food"
+}
