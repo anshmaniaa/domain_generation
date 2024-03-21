@@ -31,142 +31,29 @@ prompt_2 = """
             Here is an example of how to return your results in the following JSON format:
             {
             "output": {
-            "person-name": 0,
-            "domains": {
             "count": 10,
-            "domains": [
-                {
-                "domain": "ApexSoftware.engineer",
-                "sld": "ApexSoftware",
-                "tld": "engineer",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 1.0,
-                "score": 1.0
-                },
-                {
+            "domains": 
+                ["domain": "ApexSoftware.engineer",
+
                 "domain": "ApexSoftware.engineering",
-                "sld": "ApexSoftware",
-                "tld": "engineering",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 0.94,
-                "score": 0.94
-                },
-                {
+            
                 "domain": "ApexSoftware.download",
-                "sld": "ApexSoftware",
-                "tld": "download",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 0.84,
-                "score": 0.84
-                },
-                {
+              
                 "domain": "ApexSoftware.tech",
-                "sld": "ApexSoftware",
-                "tld": "tech",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 0.65,
-                "score": 0.65
-                },
-                {
+                
                 "domain": "ApexSoftware.technology",
-                "sld": "ApexSoftware",
-                "tld": "technology",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 0.64,
-                "score": 0.64
-                '},
-                '{
+                
                 "domain": "ApexSoftware.reviews",
-                "sld": "ApexSoftware",
-                "tld": "reviews",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 0.56,
-                "score": 0.56
-                },
-                {
+               
                 "domain": "Apex-Software.engineer",
-                "sld": "Apex-Software",
-                "tld": "engineer",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 0.5,
-                "tldValue": 1.0,
-                "score": 0.5
-                },
-                {
+                
                 "domain": "Apex-Software.engineering",
-                "sld": "Apex-Software",
-                "tld": "engineering",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 0.5,
-                "tldValue": 0.94,
-                "score": 0.47
-                },
-                {
+                
                 "domain": "Apex-Software.download",
-                "sld": "Apex-Software",
-                "tld": "download",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 0.5,
-                "tldValue": 0.84,
-                "score": 0.42
-                },
-                {
+                
                 "domain": "ApexSoftware.computer",
-                "sld": "ApexSoftware",
-                "tld": "computer",
-                "tldPhase": "GA",
-                "exact": 0,
-                "registered": 0,
-                "premium": 0,
-                "adult": 0,
-                "sldValue": 1.0,
-                "tldValue": 0.42,
-                "score": 0.42
-                }
-            ]
-            }
+                ]
+                
             }
             }
 
@@ -192,12 +79,6 @@ def get_bedrock_response(keyword):
         "top_p": 1,
         "top_k": 50
     })
-    # body = json.dumps({
-    #     "prompt": "\n\nHuman:explain black holes to 8th graders\n\nAssistant:",
-    #     # "max_tokens_to_sample": 300,
-    #     "temperature": 0.1, 
-    #     "top_p": 0.9,
-    #     })
 
 
     completion = client.invoke_model(
